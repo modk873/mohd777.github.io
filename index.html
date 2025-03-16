@@ -1,7 +1,234 @@
 <!DOCTYPE html>
-<html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أرشيف الدول العربية</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Hero Section Styles */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                        url('images/hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Countries Grid */
+        .countries-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .country-card {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .country-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .country-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .country-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            padding: 20px;
+            color: white;
+        }
+
+        .country-overlay h3 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        .country-overlay p {
+            margin: 10px 0 0;
+            font-size: 1.1rem;
+        }
+
+        /* Features Section */
+        .features {
+            background-color: #f8f9fa;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .features h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-item {
+            padding: 20px;
+        }
+
+        .feature-item i {
+            font-size: 2.5rem;
+            color: #007bff;
+            margin-bottom: 15px;
+        }
+
+        .feature-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .feature-item p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .countries-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>أرشيف الدول العربية</h1>
+            <p>اكتشف جمال وتاريخ وثقافة الدول العربية من خلال مجموعتنا الفريدة من الصور والمعلومات</p>
+        </div>
+    </section>
+
+    <!-- Countries Grid -->
+    <section class="countries-grid">
+        <!-- Qatar -->
+        <a href="qatar.html" class="country-card">
+            <img src="images/qatar-header.jpg" alt="قطر" class="country-image">
+            <div class="country-overlay">
+                <h3>قطر</h3>
+                <p>اكتشف جمال وحداثة دولة قطر</p>
+            </div>
+        </a>
+
+        <!-- Jordan -->
+        <a href="jordan.html" class="country-card">
+            <img src="images/jordan-header.jpg" alt="الأردن" class="country-image">
+            <div class="country-overlay">
+                <h3>الأردن</h3>
+                <p>استكشف روعة المواقع التاريخية في الأردن</p>
+            </div>
+        </a>
+
+        <!-- Sudan -->
+        <a href="sudan.html" class="country-card">
+            <img src="images/sudan-header.jpg" alt="السودان" class="country-image">
+            <div class="country-overlay">
+                <h3>السودان</h3>
+                <p>تعرف على تاريخ وحضارة السودان العريقة</p>
+            </div>
+        </a>
+
+        <!-- Palestine -->
+        <a href="palestine.html" class="country-card">
+            <img src="images/palestine-header.jpg" alt="فلسطين" class="country-image">
+            <div class="country-overlay">
+                <h3>فلسطين</h3>
+                <p>اكتشف جمال وتاريخ فلسطين</p>
+            </div>
+        </a>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2>مميزات الموقع</h2>
+        <div class="features-grid">
+            <div class="feature-item">
+                <i class="fas fa-camera"></i>
+                <h3>معرض صور متكامل</h3>
+                <p>مجموعة متنوعة من الصور عالية الجودة للمعالم السياحية والتاريخية</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-history"></i>
+                <h3>معلومات تاريخية</h3>
+                <p>معلومات شاملة عن تاريخ وثقافة كل دولة</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-map-marked-alt"></i>
+                <h3>أماكن سياحية</h3>
+                <p>دليل للمواقع السياحية والأثرية المهمة في كل دولة</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="contact-info">
+                    <h3>معلومات الاتصال</h3>
+                    <p>الدوحة، دولة قطر</p>
+                </div>
+                <div class="copyright">
+                    <p>جميع الحقوق محفوظة لدولة قطر © 2024</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </body>
 </html>
